@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skills</title>
+<title>Contact</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -71,44 +71,66 @@ nav a:hover::after {
     color: #38bdf8;
 }
 
-/* Skills Grid */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+/* Layout */
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
     padding: 40px 8%;
 }
 
-.skill-card {
+/* Form */
+form {
+    flex: 1;
     background: #1e293b;
-    padding: 25px;
+    padding: 30px;
     border-radius: 15px;
-    text-align: center;
-    transition: 0.3s;
 }
 
-.skill-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 0 15px #38bdf8;
-}
-
-.skill-card h3 {
-    margin-bottom: 10px;
-    color: #38bdf8;
-}
-
-/* Progress Bar */
-.progress {
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
     background: #0f172a;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 10px;
-    margin-top: 10px;
+    color: white;
 }
 
-.progress-bar {
-    height: 10px;
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
     background: #38bdf8;
+    border: none;
+    border-radius: 25px;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    background: white;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.contact-info h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 10px 0;
 }
 
 /* Footer */
@@ -121,8 +143,8 @@ footer {
 
 /* Responsive */
 @media(max-width: 768px) {
-    .title h2 {
-        font-size: 30px;
+    .contact-wrapper {
+        flex-direction: column;
     }
 }
 </style>
@@ -144,47 +166,33 @@ footer {
 
 <!-- Title -->
 <div class="title">
-    <h2>My <span>Skills</span></h2>
+    <h2>Contact <span>Me</span></h2>
 </div>
 
-<!-- Skills -->
-<div class="skills-container">
+<!-- Contact Section -->
+<div class="contact-wrapper">
 
-    <div class="skill-card">
-        <h3>Python</h3>
-        <p>Good knowledge in programming</p>
-        <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
-    </div>
+    <!-- Form -->
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 
-    <div class="skill-card">
-        <h3>HTML</h3>
-        <p>Building structured web pages</p>
-        <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
-    </div>
-
-    <div class="skill-card">
-        <h3>CSS</h3>
-        <p>Designing responsive layouts</p>
-        <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
-    </div>
-
-    <div class="skill-card">
-        <h3>JavaScript</h3>
-        <p>Basic interactivity</p>
-        <div class="progress"><div class="progress-bar" style="width: 70%"></div></div>
-    </div>
-
-    <div class="skill-card">
-        <h3>SQL</h3>
-        <p>Database management</p>
-        <div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+    <!-- Contact Details -->
+    <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><strong>Email:</strong>sindhushreeshetty015@gmail.com</p>
+        <p><strong>Phone:</strong> +91 8296229231</p>
+        <p><strong>Location:</strong> Udupi Karnataka, India</p>
     </div>
 
 </div>
 
 <!-- Footer -->
 <footer>
-    <p>© 2026 sindhushree-shetty</p>
+    <p>© 2026 Sindhushree Shetty</p>
 </footer>
 
 </body>
