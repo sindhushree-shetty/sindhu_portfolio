@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #020617);
+    color: white;
+}
+
+/* Navbar */
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 8%;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.4);
+}
+
+header h1 {
+    color: #38bdf8;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+.title h2 {
+    font-size: 40px;
+}
+
+.title span {
+    color: #38bdf8;
+}
+
+/* Skills Grid */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px 8%;
+}
+
+.skill-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 15px #38bdf8;
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+/* Progress Bar */
+.progress {
+    background: #0f172a;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #38bdf8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .title h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+    <h1>YourName</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- Title -->
+<div class="title">
+    <h2>My <span>Skills</span></h2>
+</div>
+
+<!-- Skills -->
+<div class="skills-container">
+
+    <div class="skill-card">
+        <h3>Python</h3>
+        <p>Good knowledge in programming</p>
+        <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+    </div>
+
+    <div class="skill-card">
+        <h3>HTML</h3>
+        <p>Building structured web pages</p>
+        <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+    </div>
+
+    <div class="skill-card">
+        <h3>CSS</h3>
+        <p>Designing responsive layouts</p>
+        <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+    </div>
+
+    <div class="skill-card">
+        <h3>JavaScript</h3>
+        <p>Basic interactivity</p>
+        <div class="progress"><div class="progress-bar" style="width: 70%"></div></div>
+    </div>
+
+    <div class="skill-card">
+        <h3>SQL</h3>
+        <p>Database management</p>
+        <div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Your Name</p>
+</footer>
+
+</body>
+</html>
