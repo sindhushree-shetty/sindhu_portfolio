@@ -57,21 +57,21 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* Title */
+/* Section Title */
 .title {
     text-align: center;
     padding: 60px 20px 20px;
 }
 
 .title h2 {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .title span {
     color: #38bdf8;
 }
 
-/* Skills Grid */
+/* Grid */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -79,6 +79,7 @@ nav a:hover::after {
     padding: 40px 8%;
 }
 
+/* Card */
 .skill-card {
     background: #1e293b;
     padding: 25px;
@@ -97,7 +98,7 @@ nav a:hover::after {
     color: #38bdf8;
 }
 
-/* Progress Bar */
+/* Progress */
 .progress {
     background: #0f172a;
     border-radius: 20px;
@@ -118,19 +119,11 @@ footer {
     background: #020617;
     margin-top: 40px;
 }
-
-/* Responsive */
-@media(max-width: 768px) {
-    .title h2 {
-        font-size: 30px;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
 <header>
     <h1>Sindhu</h1>
     <nav>
@@ -138,18 +131,17 @@ footer {
         <a href="about.html">About</a>
         <a href="skills.html">Skills</a>
         <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<!-- Title -->
+<!-- Technical Skills -->
 <div class="title">
-    <h2>My <span>Skills</span></h2>
+    <h2>Technical <span>Skills</span></h2>
 </div>
 
-<!-- Skills -->
 <div class="skills-container">
-
     <div class="skill-card">
         <h3>Python</h3>
         <p>Good knowledge in programming</p>
@@ -157,15 +149,9 @@ footer {
     </div>
 
     <div class="skill-card">
-        <h3>HTML</h3>
-        <p>Building structured web pages</p>
+        <h3>HTML & CSS</h3>
+        <p>Building responsive websites</p>
         <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
-    </div>
-
-    <div class="skill-card">
-        <h3>CSS</h3>
-        <p>Designing responsive layouts</p>
-        <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
     </div>
 
     <div class="skill-card">
@@ -180,9 +166,42 @@ footer {
         <div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
     </div>
 
+    <div class="skill-card">
+        <h3>FastAPI</h3>
+        <p>API development</p>
+        <div class="progress"><div class="progress-bar" style="width: 65%"></div></div>
+    </div>
 </div>
 
-<!-- Footer -->
+<!-- Soft Skills -->
+<div class="title">
+    <h2>Soft <span>Skills</span></h2>
+</div>
+
+<div class="skills-container">
+    <div class="skill-card">
+        <h3>Communication</h3>
+    </div>
+
+    <div class="skill-card">
+        <h3>Teamwork</h3>
+    </div>
+
+    <div class="skill-card">
+        <h3>Problem Solving</h3>
+    </div>
+
+    <div class="skill-card">
+        <h3>Time Management</h3>
+    </div>
+</div>
+
+
+
+
+
+  
+
 <footer>
     <p>© 2026 sindhushree-shetty</p>
 </footer>
