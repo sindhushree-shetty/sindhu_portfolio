@@ -29,10 +29,15 @@ header {
     padding: 15px 8%;
     backdrop-filter: blur(10px);
     background: rgba(0,0,0,0.4);
+    z-index: 1000;
 }
 
 header h1 {
     color: #38bdf8;
+}
+
+nav {
+    display: flex;
 }
 
 nav a {
@@ -55,6 +60,13 @@ nav a::after {
 
 nav a:hover::after {
     width: 100%;
+}
+
+/* 🔥 Mobile Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 /* Title */
@@ -139,6 +151,30 @@ footer {
 
 /* Responsive */
 @media(max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #020617;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 15px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
     .title h2 {
         font-size: 30px;
     }
@@ -151,7 +187,10 @@ footer {
 <!-- Navbar -->
 <header>
     <h1>Sindhu</h1>
-    <nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="skills.html">Skills</a>
@@ -169,41 +208,29 @@ footer {
 <!-- Projects -->
 <div class="projects-container">
 
-    <!-- Project 1 -->
     <div class="project-card">
         <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66" alt="movie booking">
         <div class="card-content">
             <h3>Movie Ticket Booking System</h3>
-            <p>
-                Built using Java Spring Boot with features like seat selection,
-                booking confirmation, and user management.
-            </p>
+            <p>Built using Java Spring Boot with features like seat selection, booking confirmation, and user management.</p>
             <a href="#" class="btn">View Project</a>
         </div>
     </div>
 
-    <!-- Project 2 -->
     <div class="project-card">
         <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831" alt="pharmacy">
         <div class="card-content">
             <h3>Pharmacy Hub</h3>
-            <p>
-                DBMS project using MySQL to manage pharmacy inventory,
-                customer orders, and stock updates efficiently.
-            </p>
+            <p>DBMS project using MySQL to manage pharmacy inventory, customer orders, and stock updates efficiently.</p>
             <a href="#" class="btn">View Project</a>
         </div>
     </div>
 
-    <!-- Project 3 -->
     <div class="project-card">
         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="analysis">
         <div class="card-content">
             <h3>Social Media Analysis</h3>
-            <p>
-                Survey-based project analyzing the impact of social media
-                across different generations with insights.
-            </p>
+            <p>Survey-based project analyzing the impact of social media across different generations with insights.</p>
             <a href="#" class="btn">View Project</a>
         </div>
     </div>
@@ -214,6 +241,12 @@ footer {
 <footer>
     <p>© 2026 Sindhushree Shetty</p>
 </footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>

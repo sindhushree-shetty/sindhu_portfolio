@@ -39,10 +39,15 @@ header {
     padding: 15px 8%;
     backdrop-filter: blur(10px);
     background: rgba(0,0,0,0.4);
+    z-index: 1000;
 }
 
 header h1 {
     color: #38bdf8;
+}
+
+nav {
+    display: flex;
 }
 
 nav a {
@@ -51,13 +56,20 @@ nav a {
     color: white;
 }
 
+/* 🔥 Mobile Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
 /* Section */
 section {
-    padding: 50px 8%;   /* reduced from 80px to 50px */
+    padding: 50px 8%;
     text-align: center;
 }
 
-/* Title style (same as other pages) */
+/* Title style */
 section h2 {
     font-size: 35px;
     margin-bottom: 20px;
@@ -88,6 +100,33 @@ footer {
     padding: 20px;
     background: #020617;
 }
+
+/* Responsive */
+@media(max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #020617;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 15px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+}
 </style>
 </head>
 
@@ -95,7 +134,10 @@ footer {
 
 <header>
     <h1>Sindhu</h1>
-    <nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="skills.html">Skills</a>
@@ -140,6 +182,12 @@ footer {
 <footer>
     <p>© 2026 Sindhushree Shetty</p>
 </footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
